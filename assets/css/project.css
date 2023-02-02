@@ -9,3 +9,23 @@ body{
 #pageName{
     color:white;
 }
+
+#topBanner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;  
+    background-color: rgba(0,0,0,0.2);
+    color:white;
+}
+
+ul {
+    list-style: none;
+}
+
+#navbar li{
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 20px;
+    font-weight: bold;
+}
