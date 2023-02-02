@@ -51,13 +51,17 @@ $('#searchBtn').on('click', function(e){
         alert('You have entered an incorrect value, please enter country name')
         return
     }
-    if (daysInput==="" ){
+    // Assigned inside variable as it was not getting the input
+    var daysInput =$('#daysInput').val()
+    // console.log($('#daysInput').val())
+    if (daysInput === '' ){
         alert('Please fill in number of days you would like to travel for')
         return
     }
     else{
         console.log(daysInput)
     }
+    var budgetInput =$('#budgetInput').val()
     if (budgetInput==="" ){
         alert('Please fill in a budget you have for your trip')
         return
@@ -68,9 +72,7 @@ $('#searchBtn').on('click', function(e){
     currencyAPI()
     
 }
-)
-
-// ?create if/else function if no input on budget and number of days input 
+) 
 
 
 // ----------FUNCTION TO CREATE AN OBJECT OF COUNTRIES AND THEIR CURRENCY
