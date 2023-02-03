@@ -18,6 +18,8 @@ $( "#search" ).autocomplete({
 })
 };
 
+const countryCodes = {};
+
 // Function to provide country options for autocomplete input
 function getCountries(){
     autocomplete()
@@ -30,6 +32,8 @@ function getCountries(){
     //    Loop through each country within the list
     // console.log(response)
         for(var i = 0; i < response.length;i++) {
+            countryCodes[response[i].name.common] = response[i].cca2;
+
             // List through each name object
             var countryNames = response[i].name.common;
             // Push it into empty array so that it can use to show countires in autocomplete dropdown
@@ -43,8 +47,10 @@ function getCountries(){
 // Need to have getCountries function outside onclick, otherwise autocomplete does not display
 getCountries()
 $('#searchBtn').on('click', function(e){
-    e.preventDefault()
-    if (countries.includes($('#search').val())){
+    const countryName = $('#search').val()
+
+    
+    if (countries.includes(countryName)){
         console.log('Its found')
     }
     else{
@@ -56,6 +62,7 @@ $('#searchBtn').on('click', function(e){
     var daysInput =$('#daysInput').val()
     // console.log($('#daysInput').val())
     if (daysInput === '' ){
+        e.preventDefault()
         $('#daysModal').modal('show')
         return
     }
@@ -64,12 +71,14 @@ $('#searchBtn').on('click', function(e){
     }
     var budgetInput =$('#budgetInput').val()
     if (budgetInput==="" ){
+        e.preventDefault()
         $('#budgetModal').modal('show')
         return
     }
     else{
         console.log(budgetInput)
     }
+
     currencyAPI()
     clearButtons()
     saveCountry()
@@ -77,6 +86,8 @@ $('#searchBtn').on('click', function(e){
     showSavedCountry()
     renderButtons()
     
+    $('#cca2').val(countryCodes[countryName]);
+
 }
 ) 
 
