@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(/Challenge/Project_1/brokebutcultured/assets/images/darkenmap.png);
+    background-image: url(https://raw.githubusercontent.com/chinapicke/-broke-but-cultured/main/assets/images/darkenmap.png)
     background-size:cover;
     background-repeat: no-repeat;
 }
