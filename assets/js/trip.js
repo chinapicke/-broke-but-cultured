@@ -9,19 +9,17 @@ var waitForEl = function(selector, callback) {
     }
   };
   
-
+// Gets url parameters values
 const currentUrl = new URL(window.location.toLocaleString());
-console.log(currentUrl)
 const countryInput = currentUrl.searchParams.get('country');
-console.log(countryInput)
+const countryCode  = currentUrl.searchParams.get('countryCode');
 const daysInput = currentUrl.searchParams.get('days');
-console.log(daysInput)
 
 
 $( document ).ready(function() {
 
   // //geoDB alpha-2 codes from cityInput
-  let countryISO = "TH";
+  let countryISO = countryCode;
 
   generateBudgetWidget();
   addVoyageBtns();
@@ -55,6 +53,9 @@ $( document ).ready(function() {
       
       $('#tripBudget').text(tripBudget);
       
+      const currencyCode = $('#budgetyourtrip .budgetyourtrip-costform:nth-child(3)').find('select').val();
+  
+  $('#currencyWidget .target select').val(currencyCode)
   });
 
   // create buttons for each wikivoyage category
