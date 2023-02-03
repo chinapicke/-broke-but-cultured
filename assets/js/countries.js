@@ -5,6 +5,7 @@ var budgetInput =$('#budgetInput').val()
 // ------------------AUTOCOMPLETE INPUT BAR-----------------------------
 
 let countries = []
+let historyCountries = []
 // set empty variable outside of function for country currency to be put into so that it can be sued for currency converter API
 var countryCurrency=""
 var countryName =''
@@ -97,4 +98,15 @@ function currencyAPI(countryCurrency) {
 }
 
 
-
+//-----FUNCTION TO MAKE BUTTONS OF PREVIOUS COUNTRY SEARCHES----
+function renderButtons (){
+    for (var i = 0; i < historyCountries.length; i++) {
+        console.log(searchCity[i])
+        var buttons = $('<button>')
+        buttons.attr({ 'id': "cityBtn", 'class': "col-sm-12" })
+        // Buttons text is from the looping through of searchCity by the users input 
+        buttons.text(searchCity[i])
+        // Adds the buttons to the div on the pagex 
+        $("#pastSearches").append(buttons);
+    }
+}
