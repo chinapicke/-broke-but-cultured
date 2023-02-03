@@ -49,14 +49,14 @@ $('#searchBtn').on('click', function(e){
     }
     else{
         // Need to change this into a modal alert/pop up 
-        alert('You have entered an incorrect value, please enter country name')
+        $('#countryModal').modal('show')
         return
     }
     // Assigned inside variable as it was not getting the input
     var daysInput =$('#daysInput').val()
     // console.log($('#daysInput').val())
     if (daysInput === '' ){
-        alert('Please fill in number of days you would like to travel for')
+        $('#daysModal').modal('show')
         return
     }
     else{
@@ -64,7 +64,7 @@ $('#searchBtn').on('click', function(e){
     }
     var budgetInput =$('#budgetInput').val()
     if (budgetInput==="" ){
-        alert('Please fill in a budget you have for your trip')
+        $('#budgetModal').modal('show')
         return
     }
     else{
