@@ -1,7 +1,11 @@
 body{
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     background-image:url();
+=======
+    background-image: url(/Challenge/Project_1/brokebutcultured/assets/images/image.jpg);
+>>>>>>> 40dcc34e35a6022ef9a72a7c3aeb5d02244fe06f
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -56,4 +60,7 @@ font-size: 20px;
 #stats{
     color: white;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 40dcc34e35a6022ef9a72a7c3aeb5d02244fe06f

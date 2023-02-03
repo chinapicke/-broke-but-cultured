@@ -8,8 +8,17 @@ let inputs = document.querySelectorAll(".input input");
 let inpt1 = inputs[0];
 let inpt2 = inputs[1];
 
+
+const Url = new URL(window.location.toLocaleString());
+const budget = Url.searchParams.get('budget');
+console.log(budget)
+
+$(budgetInput).val(budget);
+
 // Empty Object to populate with rates
 let rates = {};
+
+
 
 let requestURL = "https://api.exchangerate.host/latest?base=USD";
 // Calling an API function

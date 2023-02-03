@@ -40,7 +40,7 @@ function getCountries(){
     })
     
 }
-// Need to have getCountires function outside onclick, otherwise autocomplete does not display
+// Need to have getCountries function outside onclick, otherwise autocomplete does not display
 getCountries()
 $('#searchBtn').on('click', function(e){
     e.preventDefault()
@@ -73,7 +73,7 @@ $('#searchBtn').on('click', function(e){
     currencyAPI()
     clearButtons()
     saveCountry()
-    // This gets the city name and the relevant weather from the local storgae
+    // This gets the country name from the local storage
     showSavedCountry()
     renderButtons()
     
@@ -112,6 +112,7 @@ function currencyAPI(countryCurrency) {
 function renderButtons (){
     showSavedCountry()
     for (var i = 0; i < historyCountries.length; i++) {
+
         console.log(historyCountries[i])
         var buttons = $('<button>')
         buttons.attr({ 'id': "countryBtn", 'class': "col-sm-3" })
@@ -133,7 +134,9 @@ function clearButtons() {
 }
 // // ------FUNCTION SAVE COUNTRY-----
 function saveCountry() {
+    
     localStorage.setItem("historyCountries", JSON.stringify(historyCountries)); //saves city input to local storage 
+
 }
 
 // // ----FUNCTION GET SAVED COUNTY-----

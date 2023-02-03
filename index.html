@@ -32,7 +32,7 @@
         </div>
     </header><!-- End Header -->
     <!-- End Header -->
-
+    
     <main id="hero">
         <div class="container">
             <div class="row">
@@ -40,26 +40,18 @@
                     <h2>Need help finding your next destination?</h2>
                     <h3>Want to budget and stay cultured?</h3>
                     <h4>Search away...</h4>
-                    <form id="countries_search" class="col-lg-9">
-                        <h2>What country would you like to visit?</h2>
-                        <div class="input-group" id="input">
-                            <input type="text" id='search' class="form-control " placeholder="e.g. Thailand"
-                                aria-label="Country Name" aria-describedby="basic-addon2">
-                        </div>
-                        <h2>How many days?</h2>
-                        <div class="input-group" id="input">
-                            <input type="text" id='daysInput' class="form-control" placeholder="e.g 14"
-                                aria-label="Days" aria-describedby="basic-addon2">
-                        </div>
-                        <h2>What is your budget?</h2>
-                        <div class="input-group" id="input">
-                            <input type="text" id="budgetInput" class="form-control" placeholder="e.g. 2000"
-                                aria-label="budgetInput" aria-describedby="basic-addon2">
-                        </div>
+                    
+                        
 
-                        <div class="input-group-append">
-                            <button class="btn btn-lg btn-light" id="searchBtn" type="button">Button</button>
-                        </div>
+      <form action="/trip.html" method="get" id="countries_search" target="_self">
+          <label for="country"></label>
+          <input type="text" id='search' placeholder="Enter the country you want to visit" class="form-control" name="country">
+          <label for="days"></label>
+          <input type="number" id='daysInput' placeholder="For how many days?" class="form-control" name="days">
+          <label for="budget"></label>
+          <input type="number" id='budgetInput' placeholder="What's your budget?" class="form-control" name="budget">
+          <input type="submit" value="Submit">
+      </form>
 
                         <!--Country Modal-->
                         <div class="modal fade" id="countryModal">
@@ -117,9 +109,9 @@
                             </div>
                         </div>
                         <!-- End of Budget modal -->
-                    </form>
+                  
+   
 
-                </div>
                 <div class="col-lg-3">
                     <img src="./assets/images/Lovepik_com-611131639-Travel Travel Passport Ticket png.png"
                         class="img-fluid mb-3 mb-lg-0" id="passport" alt="">
