@@ -94,7 +94,12 @@ $('#searchBtn').on('click', function(e){
 ) 
 
 // ---FUNCTION CLEAR SEARCH HISTORY
-
+$('#clearSearch').on('click', function () {
+    // clears local storage
+    localStorage.clear()
+    // reloads the page to show user that the saved countries are gone
+    location.reload()
+})
 
 
 
@@ -157,13 +162,6 @@ function showSavedCountry() {
     historyCountries = JSON.parse(localStorage.getItem('historyCountries')) || [];
 }
 
-// ---FUNCTION CLEAR SEARCH HISTORY
-$('#clearSearch').on('click', function () {
-    // clears local storage
-    localStorage.clear()
-    // reloads the page to show user that the saved countries are gone
-    location.reload()
-})
 
 
 // // Keeps buttons on page even when refreshed
