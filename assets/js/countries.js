@@ -4,8 +4,8 @@ var budgetInput =$('#budgetInput').val()
 
 // ------------------AUTOCOMPLETE INPUT BAR-----------------------------
 
-let countries = []
-let historyCountries = []
+var countries = []
+var historyCountries = []
 // set empty variable outside of function for country currency to be put into so that it can be sued for currency converter API
 var countryCurrency=""
 var countryName =''
@@ -71,6 +71,11 @@ $('#searchBtn').on('click', function(e){
         console.log(budgetInput)
     }
     currencyAPI()
+    clearButtons()
+    saveCountry()
+    // This gets the city name and the relevant weather from the local storgae
+    showSavedCountry()
+    renderButtons()
     
 }
 ) 
@@ -81,6 +86,7 @@ $('#searchBtn').on('click', function(e){
 // Function to get the countries currency
 function currencyAPI(countryCurrency) {
     var countryName = $('#search').val()
+    historyCountries.push(countryName)
     var countryURL = 'https://restcountries.com/v2/name/'+countryName+'?fullText=true'
     $.ajax({
         url: countryURL,
@@ -100,13 +106,36 @@ function currencyAPI(countryCurrency) {
 
 //-----FUNCTION TO MAKE BUTTONS OF PREVIOUS COUNTRY SEARCHES----
 function renderButtons (){
+    showSavedCountry()
     for (var i = 0; i < historyCountries.length; i++) {
-        console.log(searchCity[i])
+        console.log(historyCountries[i])
         var buttons = $('<button>')
-        buttons.attr({ 'id': "cityBtn", 'class': "col-sm-12" })
+        buttons.attr({ 'id': "countryBtn", 'class': "col-sm-3" })
         // Buttons text is from the looping through of searchCity by the users input 
-        buttons.text(searchCity[i])
+        buttons.text(historyCountries[i])
         // Adds the buttons to the div on the pagex 
         $("#pastSearches").append(buttons);
+        buttons.on('click', function (event) {
+            // used event target to target the element that caused the button on click
+            getCountries(countryName)
+        })
     }
 }
+
+// ----FUNCTION TO CLEAR BUTTONS-----
+// clear buttons stop them to showing on page twice
+function clearButtons() {
+    $('#pastSearches').empty()
+}
+// // ------FUNCTION SAVE COUNTRY-----
+function saveCountry() {
+    localStorage.setItem("historyCountries", JSON.stringify(historyCountries)); //saves city input to local storage 
+}
+
+// // ----FUNCTION GET SAVED COUNTY-----
+function showSavedCountry() {
+    historyCountries = JSON.parse(localStorage.getItem('historyCountries')) || [];
+}
+
+// // Keeps buttons on page even when refreshed
+renderButtons()
