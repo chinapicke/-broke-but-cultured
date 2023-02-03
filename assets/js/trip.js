@@ -10,16 +10,18 @@ var waitForEl = function(selector, callback) {
   };
   
 
-$( document ).ready(function() {
+const currentUrl = new URL(window.location.toLocaleString());
+console.log(currentUrl)
+const countryInput = currentUrl.searchParams.get('country');
+console.log(countryInput)
+const daysInput = currentUrl.searchParams.get('days');
+console.log(daysInput)
 
-  let daysInput = 10;
+
+$( document ).ready(function() {
 
   // //geoDB alpha-2 codes from cityInput
   let countryISO = "TH";
-
-  // country input from dropdown
-  //let countryInput = $('#countryInput').val();
-  let countryInput = "Thailand";
 
   generateBudgetWidget();
   addVoyageBtns();
