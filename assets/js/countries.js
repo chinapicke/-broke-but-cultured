@@ -71,6 +71,7 @@ $('#searchBtn').on('click', function(e){
         console.log(budgetInput)
     }
     currencyAPI()
+    renderButtons()
     
 }
 ) 
@@ -81,6 +82,7 @@ $('#searchBtn').on('click', function(e){
 // Function to get the countries currency
 function currencyAPI(countryCurrency) {
     var countryName = $('#search').val()
+    historyCountries.push(countryName)
     var countryURL = 'https://restcountries.com/v2/name/'+countryName+'?fullText=true'
     $.ajax({
         url: countryURL,
@@ -101,11 +103,11 @@ function currencyAPI(countryCurrency) {
 //-----FUNCTION TO MAKE BUTTONS OF PREVIOUS COUNTRY SEARCHES----
 function renderButtons (){
     for (var i = 0; i < historyCountries.length; i++) {
-        console.log(searchCity[i])
+        console.log(historyCountries[i])
         var buttons = $('<button>')
-        buttons.attr({ 'id': "cityBtn", 'class': "col-sm-12" })
+        buttons.attr({ 'id': "countryBtn", 'class': "col-sm-12" })
         // Buttons text is from the looping through of searchCity by the users input 
-        buttons.text(searchCity[i])
+        buttons.text(historyCountries[i])
         // Adds the buttons to the div on the pagex 
         $("#pastSearches").append(buttons);
     }
