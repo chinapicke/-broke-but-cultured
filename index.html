@@ -36,86 +36,88 @@
     <main id="hero">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9">
-                    <h2>Need help finding your next destination?</h2>
-                    <h3>Want to budget and stay cultured?</h3>
-                    <h4>Search away...</h4>
-                    
+            <div class="col-lg-9">
+
+                <h2>Need help finding your next destination?</h2>
+                <h3>Want to budget and stay cultured?</h3>
+                <h4>Search away...</h4>
+                   
                         
 
-      <form action="/trip.html" method="get" id="countries_search" target="_self">
-          <label for="country"></label>
-          <input type="text" id='search' placeholder="Enter the country you want to visit" class="form-control" name="country">
-          <label for="days"></label>
-          <input type="number" id='daysInput' placeholder="For how many days?" class="form-control" name="days">
-          <label for="budget"></label>
-          <input type="number" id='budgetInput' placeholder="What's your budget?" class="form-control" name="budget">
-          <input type="submit" value="Submit">
-      </form>
+                <form action="/trip.html" method="get" id="countries_search" target="_self">
+                    <label for="country"></label>
+                    <input type="hidden" name="countryCode" id="cca2" />
+                    <input type="text" id='search' placeholder="What country would you like to visit?" class="form-control" name="country" aria-label="Country Name" aria-describedby="basic-addon2">
+                    <label for="days"></label>
+                    <input type="number" id='daysInput' placeholder="For how many days?" class="form-control" name="days" aria-label="Days" aria-describedby="basic-addon2">
+                    <label for="budget"></label>
+                    <input type="number" id='budgetInput' placeholder="What's your budget (£) ?" class="form-control" name="budget" aria-label="budgetInput" aria-describedby="basic-addon2">
+                    <input type="submit" value="Submit" id="searchBtn">
+                </form>
 
-                        <!--Country Modal-->
-                        <div class="modal fade" id="countryModal">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title">Incorrect Country Input</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Please enter a valid country from the options provided</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
+            </div>
+
+                    <!--Country Modal-->
+                    <div class="modal fade" id="countryModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Incorrect Country Input</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Please enter a valid country from the options provided</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default"
+                                        data-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
-                        <!-- End of country modal -->
+                    </div>
+                    <!-- End of country modal -->
 
-                        <!--Days Modal-->
-                        <div class="modal fade" id="daysModal">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title">Incorrect Days Input</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Please enter a valid number of days </p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
+                    <!--Days Modal-->
+                    <div class="modal fade" id="daysModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Incorrect Days Input</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Please enter a valid number of days </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default"
+                                        data-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
-                        <!-- End of days modal -->
+                    </div>
+                    <!-- End of days modal -->
 
-                        <!--Budget Modal-->
-                        <div class="modal fade" id="budgetModal">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title">Incorrect Budget Input</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Please enter a numerical amount of money you have for your trip</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
+                    <!--Budget Modal-->
+                    <div class="modal fade" id="budgetModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Incorrect Budget Input</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Please enter a numerical amount of money you have for your trip</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default"
+                                        data-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
-                        <!-- End of Budget modal -->
-                  
+                    </div>
+                    <!-- End of Budget modal -->
+                
    
-
-                <div class="col-lg-3">
+            <div class="col-lg-3">
                     <img src="./assets/images/Lovepik_com-611131639-Travel Travel Passport Ticket png.png"
                         class="img-fluid mb-3 mb-lg-0" id="passport" alt="">
-                </div>
             </div>
 
             <div class="row" id="stats">
@@ -132,7 +134,10 @@
                     <p>Cultures</p>
                 </div>
             </div>
-            <div class="row" id="pastSearches">
+            <div class="row">
+                <div class="col-lg-9" id="pastSearches">
+                    <!-- past searched countrues -->
+                </div>
             </div>
 
     </main>

@@ -8,10 +8,10 @@ let inputs = document.querySelectorAll(".input input");
 let inpt1 = inputs[0];
 let inpt2 = inputs[1];
 
-
+const defaultCurrencyCode = 'GBP';
+// gets budget param from URL
 const Url = new URL(window.location.toLocaleString());
 const budget = Url.searchParams.get('budget');
-console.log(budget)
 
 $(budgetInput).val(budget);
 
@@ -35,12 +35,18 @@ async function fetchRates() {
 function populateOptions() {
   let val = "";
   Object.keys(rates).forEach((code) => {
+    let str;
     //Template for Inner HTML
-    let str = `<option value="${code}">${code}</option>`;
+    if (defaultCurrencyCode == code)
+      str = `<option value="${code}" selected>${code}</option>`;
+    else
+      str = `<option value="${code}">${code}</option>`;
     val += str;
   });
   // Adding rates in to Selects 
   selects.forEach((s) => (s.innerHTML = val));
+
+  
 }
 
 
