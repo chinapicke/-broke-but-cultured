@@ -91,6 +91,10 @@ $('#searchBtn').on('click', function(e){
 }
 ) 
 
+// ---FUNCTION CLEAR SEARCH HISTORY
+
+
+
 
 // ----------FUNCTION TO CREATE AN OBJECT OF COUNTRIES AND THEIR CURRENCY
 

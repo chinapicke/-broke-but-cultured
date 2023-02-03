@@ -6,6 +6,7 @@ body{
     background-repeat: no-repeat;
 }
 
+/* NAVBAR/HEADER OF PAGE */
 #pageName{
     color:white;
 }
@@ -20,8 +21,6 @@ body{
 
 ul {
     list-style: none;
-    text-decoration: none ;
-
 }
 
 #navbar li{
@@ -32,6 +31,29 @@ ul {
     font-weight: bold;
 }
 
+#navbar li a{
+    color: white;
+    text-decoration: none;
+    transform: all ease 0.5s;
+}
+#navbar li:hover{
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.2)
+}
+
+
+/* INPUT  */
+h2{
+font-size: 20px;
+}
+
+
+
+
+
+
 #stats{
     color: white;
 }
+
