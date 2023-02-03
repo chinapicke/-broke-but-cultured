@@ -48,9 +48,7 @@ function getCountries(){
 getCountries()
 $('#searchBtn').on('click', function(e){
 
-    
     const countryName = $('#search').val()
-
 
     if (countries.includes(countryName)){
         console.log('Its found')
@@ -66,6 +64,7 @@ $('#searchBtn').on('click', function(e){
     if (daysInput === '' ){
         e.preventDefault();
         $('#daysModal').modal('show');
+
         return
     }
     else{
