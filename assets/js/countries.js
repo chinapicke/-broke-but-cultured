@@ -47,9 +47,11 @@ function getCountries(){
 // Need to have getCountries function outside onclick, otherwise autocomplete does not display
 getCountries()
 $('#searchBtn').on('click', function(e){
-    const countryName = $('#search').val()
 
     
+    const countryName = $('#search').val()
+
+
     if (countries.includes(countryName)){
         console.log('Its found')
     }
@@ -62,8 +64,8 @@ $('#searchBtn').on('click', function(e){
     var daysInput =$('#daysInput').val()
     // console.log($('#daysInput').val())
     if (daysInput === '' ){
-        e.preventDefault()
-        $('#daysModal').modal('show')
+        e.preventDefault();
+        $('#daysModal').modal('show');
         return
     }
     else{
