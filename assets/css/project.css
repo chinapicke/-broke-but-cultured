@@ -1,11 +1,12 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(https://media.istockphoto.com/id/1287056904/vector/world-map-background-concept.jpg?s=612x612&w=0&k=20&c=sKn4It_dtXF9G6SL4HD02hfKUtZrge7VKCFM51nq34c=);
+    background-image:url();
     background-size:cover;
     background-repeat: no-repeat;
 }
 
+/* NAVBAR/HEADER OF PAGE */
 #pageName{
     color:white;
 }
@@ -20,8 +21,6 @@ body{
 
 ul {
     list-style: none;
-    text-decoration: none ;
-
 }
 
 #navbar li{
@@ -32,6 +31,29 @@ ul {
     font-weight: bold;
 }
 
+#navbar li a{
+    color: white;
+    text-decoration: none;
+    transform: all ease 0.5s;
+}
+#navbar li:hover{
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.2)
+}
+
+
+/* INPUT  */
+h2{
+font-size: 20px;
+}
+
+
+
+
+
+
 #stats{
     color: white;
 }
+
