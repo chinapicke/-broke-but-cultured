@@ -25,6 +25,7 @@
 <body>
 
     <main class="container">
+        
         <!-- svg code -->
         <div class="custom-shape-divider-bottom-1675462330">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -34,30 +35,33 @@
             </svg>
         </div>
 
-        <h1 class="my-5">Broke <span id="but">but</span> Cultured</h1>
+        <h1 class="mt-5">Broke <span id="but">but</span> Cultured</h1>
 
-        <section class="row my-2" id="travelInfo">
-            <h2>Find out where to go and what to do in <span id="countryTitle"></span>!</h2>
+        <section class="row my-3" id="travelInfo">
+            <h2 class="my-4">Find out where to go and what to do in <span id="countryTitle"></span>!</h2>
             <div class="col d-flex flex-wrap" id="wiki">
             <!-- travel info links go here -->
             </div>
 
 
-            <article class="mt-5">
+            <article class="mt-4">
                 <h2 id="tripBudget"><!-- total cost of trip result goes here --></h2>
+
             </article>
         </section>
 
 
         <div class="row my-3 m-auto">
 
-            <section class="card col-lg-10 col-md-10 col-sm-9 col-xs-10" id="budgetyourtrip">
+            <section class="card col-lg-10 col-md-10 col-sm-10 col-xs-10 mt-4" id="budgetyourtrip">
                 <!-- travel budget widget goes here -->
-                </section>
-        
-        <div class="row my-3 m-auto">
+            </section>
 
-            <section class="card col-lg-6 col-md-6 col-sm-10 col-xs-10" id="currencyWidget">
+        </div>
+        
+        <div class="row d-flex my-3 m-auto">
+
+            <section class="card col-lg-4 col-md-6 col-sm-9 col-xs-9 mt-5" id="currencyWidget">
                 <!-- currency converter goes here -->           
                 <div class="currency">
                     <div class="card-body p-2">
@@ -81,11 +85,18 @@
                             </div>
                         <button class="result">Convert!</button>
                     </div>
-                </div>   
+                </div>
+            
             </section>
+            
+            <div class="row">
+                <a id='new' class="btn btn-secondary my-5" href="index.html" role="button">New Search</a>
+            </div>
+            
         </div>
 
-        </div>
+
+
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

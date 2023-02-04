@@ -18,46 +18,94 @@
 html {
     height: 100%;
     background-color: whitesmoke;
+    
+}
+
+p {
+    font-size: 1.5rem;;
 }
 
 body {
-
+    /* height: 100%; */
     background-image: url(../images/annie-spratt-qyAka7W5uMY-unsplash\ \(1\).jpg);
-    height: 100%;
-
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    line-height: 2.5rem !important;
+    min-height: 100%;
+    padding-block: min(10vh, 3.5rem) !important;
 }
 
 h1 {
     color: var(--surf);
     text-shadow: 2px 7px 5px var(--text-blue), 
     0px -4px 10px rgba(33, 33, 33, 0.3);
-    padding-top: 2rem;
-    font-size: 5rem !important;
-    
+    margin-bottom: 3rem !important;
+    font-size: min(5rem, 7rem) !important;  
 }
 
 #but {
     color: var(--text-blue);
-    font-size: 4.5rem !important;
+    font-size: min(3rem, 4.5rem) !important;
     text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
     0px -4px 10px rgba(255,255,255,0.3);
 
 }
 
-main {
-    height: max-content;
+h2, h3 {
+    text-shadow: 2px 2px var(--smalt-blue);
+    font-size: 2.5rem !important;
+}
+
+h3 {
+    font-size: 2rem !important;
+
+}
+
+
+form div {
+    margin-block: min(20vh, 1rem);
+    width: 100%;
+}
+
+
+.btn {
+    background-color: #FA9B95 !important;
+    border: 0 !important;
+    padding: 1rem !important;
+    margin: 1rem !important;
+}
+
+.btn:hover {
+    text-shadow: 2px 2px var(--smalt-blue);
+    text-decoration: none;
+}
+
+#bookNow, #clearSearch {
+    text-decoration: none;
+    color: #1f2348;
+
+}
+
+.form-control {
+    min-width: fit-content;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+
 }
 
 ul {
     list-style: none;
-    display: flex;
 }
 
 .card {
     margin-bottom: 5rem;
     border: 0 !important;
-    background-color: #bbd6bf87 !important;
+    background-color: #bbd6bfd6 !important;
     border-radius: 5% !important;
+    margin: auto;
     
 }
 
@@ -106,3 +154,4 @@ ul {
 
  
 }
+

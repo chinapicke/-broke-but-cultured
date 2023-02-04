@@ -18,7 +18,7 @@ html {
 
 body{
     background-color: whitesmoke !important;
-
+    margin-bottom: 5rem;
 }
 
 h2, h3, h4, p {
@@ -73,12 +73,18 @@ select {
 #currencyWidget {
     background-color: var(--maize);
     height: fit-content;
+    margin: auto;
 }
 
 #budgetyourtrip {
     background-color: var(--pink);
+    margin: auto;
 }
 
+#new {
+    width: fit-content;
+    margin: auto;
+}
 
 /* svg css */
 .custom-shape-divider-bottom-1675462330 {
