@@ -79,7 +79,12 @@ $('#searchBtn').on('click', function(e){
     else{
         console.log(budgetInput)
     }
-
+//     If statement to limit country searches to 8
+      if (historyCountries.length === 8){
+        e.preventDefault()
+        $('#limitModal').modal('show')
+        return
+    }
     currencyAPI()
     clearButtons()
     saveCountry()
