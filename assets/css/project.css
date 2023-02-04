@@ -4,62 +4,107 @@
     --pink: #FA9B95;
     --surf: #BBD6BF;
     --smalt-blue: #4E818B;
+    --text-blue: #1f2348;
+
 }
 
 
 body{
-    margin: 0;
-    padding: 0;
+   
+* {
+    /* font-family: 'Rubik', sans-serif; */
+    font-family: 'Laila', sans-serif;
 
 }
 
-/* NAVBAR/HEADER OF PAGE */
-#pageName{
-    color:white;
+html {
+    height: 100%;
+    background-color: whitesmoke;
 }
 
-#topBanner{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;  
-    background-color: rgba(0,0,0,0.2);
-    color:white;
+body {
+
+    background-image: url(../images/annie-spratt-qyAka7W5uMY-unsplash\ \(1\).jpg);
+    height: 100%;
+
+}
+
+h1 {
+    color: var(--surf);
+    text-shadow: 2px 7px 5px var(--text-blue), 
+    0px -4px 10px rgba(33, 33, 33, 0.3);
+    padding-top: 2rem;
+    font-size: 5rem !important;
+    
+}
+
+#but {
+    color: var(--text-blue);
+    font-size: 4.5rem !important;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+
+}
+
+main {
+    height: max-content;
 }
 
 ul {
     list-style: none;
+    display: flex;
 }
 
-#navbar li{
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 20px;
-    font-weight: bold;
+.card {
+    margin-bottom: 5rem;
+    border: 0 !important;
+    background-color: #bbd6bf87 !important;
+    border-radius: 5% !important;
+    
 }
 
-#navbar li a{
-    color: white;
-    text-decoration: none;
-    transform: all ease 0.5s;
-}
-#navbar li:hover{
-    color: white;
-    text-decoration: none;
-    background-color: rgba(0,0,0,0.2)
+.titleGroup{
+    padding: 2rem;
 }
 
+#countries_search {
+    padding: 2rem;
+}
 
-/* INPUT  */
-h2{
-font-size: 20px;
+#stats {
+    padding: 2rem;
+    text-align: center;
 }
 
 
 
+/* svg css */
+.custom-shape-divider-bottom-1675462330 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
 
+.custom-shape-divider-bottom-1675462330 svg {
+    position: relative;
+    display: block;
+    width: calc(177% + 1.3px);
+    height: 100%;
+}
 
+.custom-shape-divider-bottom-1675462330 .shape-fill {
+    fill: var(--surf);
+}
 
-#stats{
-    color: white;
+/** For mobile devices **/
+@media (max-width: 1100px) {
+    .custom-shape-divider-bottom-1675462330 svg {
+        display:none;
+    }
+
+ 
 }

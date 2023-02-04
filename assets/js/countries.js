@@ -132,7 +132,7 @@ function renderButtons (){
 
         console.log(historyCountries[i])
         var buttons = $('<button>')
-        buttons.attr({ 'id': "countryBtn", 'class': "col-sm-3" })
+        buttons.attr({ 'id': "countryBtn", 'class': "col-sm-3 btn btn-secondary" })
         // Buttons text is from the looping through of searchCity by the users input 
         buttons.text(historyCountries[i])
         // Adds the buttons to the div on the pagex 

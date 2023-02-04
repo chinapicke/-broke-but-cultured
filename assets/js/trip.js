@@ -72,7 +72,7 @@ $( document ).ready(function() {
           
           for (let x of response.query.search) {
           
-          const voyageBtn = $(`<a target="_blank" href="https://en.wikivoyage.org/wiki/${x.title}"><button class="btn m-1 btn-info">${x.title}</button></a>`);
+          const voyageBtn = $(`<a target="_blank" href="https://en.wikivoyage.org/wiki/${x.title}"><button class="btn m-1">${x.title}</button></a>`);
           $('#wiki').append(voyageBtn);
           
           
