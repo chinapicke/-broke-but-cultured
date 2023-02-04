@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
     <!-- Link to css -->
     <link rel="stylesheet" href="./assets/css/project.css" />
     <!-- google fonts -->
@@ -38,15 +38,6 @@
     <header id="header">
         <div class="container" id="topBanner">
             <h1 id="pageName" class="pt-5">Broke <span id="but">but</span> Cultured</h1>
-            <!-- .navbar -->
-            <nav id="navbar" class="navbar d-flex justify-content-between">
-                <ul>
-                    <li><a href="https://www.expedia.com/" target="_blank" id="bookNow">Book Now!</a></li>
-
-                    <li ><a href="#" id="clearSearch">Clear Search History</a></li>
-
-                </ul>
-            </nav>
 
         </div>
     </header>
@@ -70,9 +61,9 @@
                     <input type="text" id='search' placeholder="What country would you like to visit?" class="form-control" name="country" aria-label="Country Name" aria-describedby="basic-addon2">
                     <label for="days"></label>
                     <input type="number" id='daysInput' placeholder="For how many days?" class="form-control" name="days" aria-label="Days" aria-describedby="basic-addon2">
-                    <!-- <label for="budget"></label> -->
-                    <!-- <input type="number" id='budgetInput' placeholder="What's your budget (£) ?" class="form-control" name="budget" aria-label="budgetInput" aria-describedby="basic-addon2"> -->
-                    <input type="submit" value="Search" id="searchBtn" class="btn btn-secondary my-3">
+                    <label for="budget"></label>
+                    <input type="number" id='budgetInput' placeholder="What's your budget (£) ?" class="form-control" name="budget" aria-label="budgetInput" aria-describedby="basic-addon2">
+                    <input type="submit" value="Search" id="searchBtn" class="btn btn-secondary mt-5">
                 </form>
                     
                 <div class="d-flex justify-content-around" id="stats">
@@ -102,7 +93,19 @@
             </div>
         </div>
 
+            
+        <!-- .navbar -->
+        <nav id="navbar" class="navbar d-flex">
+            <ul>
+                <li><a href="https://www.expedia.com/" target="_blank" id="bookNow">Book Now!</a></li>
+
+                <li><a href="#" id="clearSearch">Clear Search History</a></li>
+
+            </ul>
+        </nav>
+
     </main>
+
 
 
         <!--Country Modal-->
