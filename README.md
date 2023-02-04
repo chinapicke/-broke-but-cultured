@@ -23,8 +23,8 @@ It includes a travel currency converter with a search input by country that prov
 
 ```md
 AS A traveller planning a holiday;
-I WANT to know how much money I need and learn a bit about my destination;
-SO I CAN plan my holiday according to my budget and be cultured.
+I WANT to know how much money I need & learn a bit about my destination;
+SO I CAN plan my holiday according to my budget & be cultured.
 ```
 
 ### Built with
