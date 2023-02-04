@@ -48,9 +48,7 @@ function getCountries(){
 getCountries()
 $('#searchBtn').on('click', function(e){
 
-    
     const countryName = $('#search').val()
-
 
     if (countries.includes(countryName)){
         console.log('Its found')
@@ -66,6 +64,7 @@ $('#searchBtn').on('click', function(e){
     if (daysInput === '' ){
         e.preventDefault();
         $('#daysModal').modal('show');
+
         return
     }
     else{
@@ -133,7 +132,7 @@ function renderButtons (){
 
         console.log(historyCountries[i])
         var buttons = $('<button>')
-        buttons.attr({ 'id': "countryBtn", 'class': "col-sm-3" })
+        buttons.attr({ 'id': "countryBtn", 'class': "col-sm-3 btn btn-secondary" })
         // Buttons text is from the looping through of searchCity by the users input 
         buttons.text(historyCountries[i])
         // Adds the buttons to the div on the pagex 

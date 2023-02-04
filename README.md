@@ -6,7 +6,7 @@ App to help travelers with budgeting their trips.
 
 ## Authors
 
-- [China Picke](https://github.com/chinapicke)
+- [China Pickering](https://github.com/chinapicke)
 - [Berta Romano Fernadez](https://github.com/berta-rf)
 - [Sergejs Hamjonoks](https://github.com/HereToTroll)
 
@@ -41,4 +41,5 @@ Installation instruction
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
 
