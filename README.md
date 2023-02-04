@@ -56,7 +56,7 @@ SO I CAN plan my holiday according to my budget & be cultured.
 ## Authors
 
 - [China Pickering](https://github.com/chinapicke)
-- [Berta Romano Fernadez](https://github.com/berta-rf)
+- [Berta Romano Fernandez](https://github.com/berta-rf)
 - [Sergejs Hamjonoks](https://github.com/HereToTroll)
 
 ## License
