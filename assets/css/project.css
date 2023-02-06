@@ -22,11 +22,11 @@ html {
 }
 
 p {
-    font-size: 1.5rem;;
+    font-size: 1.5rem;
 }
 
 body {
-    /* height: 100%; */
+
     background-image: url(../images/annie-spratt-qyAka7W5uMY-unsplash\ \(1\).jpg);
     background-size: cover;
     background-position: center center;
@@ -34,7 +34,6 @@ body {
     background-attachment: fixed;
     line-height: 2.5rem !important;
     min-height: 100%;
-    /* padding-block: min(10vh, 3.5rem) !important; */
 }
 
 h1 {
@@ -105,25 +104,13 @@ ul {
 }
 
 .card {
-    margin-bottom: 5rem;
+    margin-bottom: 5rem !important;
     border: 0 !important;
     background-color: #bbd6bfd6 !important;
     border-radius: 5% !important;
-    margin: auto;
     padding-left: 2rem ;
     padding-right: 2rem ;
     padding-top: 2rem ;
-
-    /* margin: auto; */
-}
-
-#hero{
-   margin-right: 10px; 
-}
-
-
-.titleGroup{
-    /* padding: 2rem; */
 }
 
 
@@ -145,39 +132,7 @@ ul {
 #categorises{
     font-size: 15px;
 }
+
 h4{
     padding-bottom: 0;
 }
-
-/* svg css */
-.custom-shape-divider-bottom-1675462330 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1675462330 svg {
-    position: relative;
-    display: block;
-    width: calc(177% + 1.3px);
-    height: 100%;
-}
-
-.custom-shape-divider-bottom-1675462330 .shape-fill {
-    fill: var(--surf);
-}
-
-/** For mobile devices **/
-@media (max-width: 1100px) {
-    .custom-shape-divider-bottom-1675462330 svg {
-        display:none;
-    }
-
- 
-}
-
-
