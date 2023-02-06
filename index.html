@@ -43,92 +43,102 @@
     </header>
     <!-- End Header -->
     
-    <main class='container' id="hero">
+      <main class='container' id="hero">
         <div class="row">
+            <div class ="col-lg-9">
+                <div class="card wrapper ">
 
-            <div class="card wrapper mx-2 col-xl-10 col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                
-                <div class="titleGroup mt-2 pb-0">
-                    <h2>Need help finding your next destination?</h2>
-                    <h3>Want to budget and stay cultured?</h3>
-                    <h4><i>Search away...</i></h4>
-                </div>
-                       
-                <form action="trip.html" method="get" id="countries_search" target="_self">
-                    <!-- <label for="country"></label> -->
-                    <input type="hidden" name="countryCode" id="cca2" />
-                    <div>
-                      <input type="text" id='search' placeholder="What country would you like to visit?" class="form-control" name="country" aria-label="Country Name" aria-describedby="basic-addon2">
-                    </div >
-                    <!-- <label for="days"></label> -->
-                    <div>
-                      <input type="number" id='daysInput' placeholder="For how many days?" class="form-control" name="days" aria-label="Days" aria-describedby="basic-addon2">
-                    </div> 
-                    <!-- <label for="budget"></label> -->
-                    <div>
-                      <input type="number" id='budgetInput' placeholder="What's your budget (£) ?" class="form-control" name="budget" aria-label="budgetInput" aria-describedby="basic-addon2">
+                    <div class="titleGroup  pb-0">
+                        <h2>Need help finding your next destination?</h2>
+                        <h3>Want to budget and stay cultured?</h3>
+                        <h4><i>Search away...</i></h4>
                     </div>
-                    <input type="submit" value="Search" id="searchBtn" class="btn btn-secondary mt-5">
-                </form>
-                    
-                <div class="d-flex justify-content-around" id="stats">
-                    <div id="countryStats">
-                        <p>195</p>
-                        <p class="mx-2">Countries</p>
-                    </div>
-                    <div id="currencyStats">
-                        <p>180</p>
-                        <p class="mx-2">Currencies</p>
-                    </div>
-                    <div id="cultureStats">
-                        <p>1000+</p>
-                        <p class="mx-2">Cultures</p>
-                    </div>
-                </div>
-
-                       
-                <div class="row">
-                    <div class="col">
-                        <div class="m-2 d-flex flex-wrap justify-content-around" id="pastSearches">
-                        <!-- past searched countries modal-->
-                            <div class="modal fade" id="limitModal">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Country Search Limit</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>You've reached your max saved country limit of 8.<br>
-                                            Please clear search history.</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default"
-                                            data-dismiss="modal">Close</button>
-                                        </div>
-                                     </div>
-                                 </div>
-                             </div>
-                        <!-- End of searched modal -->
-
+    
+                    <form action="trip.html" method="get" id="countries_search" target="_self">
+                        <!-- <label for="country"></label> -->
+                        <input type="hidden" name="countryCode" id="cca2" />
+                        <div>
+                            <input type="text" id='search' placeholder="What country would you like to visit?"
+                                class="form-control" name="country" aria-label="Country Name"
+                                aria-describedby="basic-addon2">
+                        </div>
+                        <!-- <label for="days"></label> -->
+                        <div>
+                            <input type="number" id='daysInput' placeholder="For how many days?" class="form-control"
+                                name="days" aria-label="Days" aria-describedby="basic-addon2">
+                        </div>
+                        <!-- <label for="budget"></label> -->
+                        <div>
+                            <input type="number" id='budgetInput' placeholder="What's your budget (£) ?"
+                                class="form-control" name="budget" aria-label="budgetInput" aria-describedby="basic-addon2">
+                        </div>
+                        <input type="submit" value="Search" id="searchBtn" class="btn btn-secondary">
+                    </form>
+    
+                    <div class="d-flex justify-content-around" id="stats">
+                        <div id="countryStats">
+                            <p id="num">195</p>
+                            <hr>
+                            <p class="mx-2" id="categorises">Countries</p>
+                        </div>
+                        <div id="currencyStats">
+                            <p id="num">180</p>
+                            <hr>
+                            <p class="mx-2" id="categorises">Currencies</p>
+                        </div>
+                        <div id="cultureStats">
+                            <p id="num">1000+</p>
+                            <hr>
+                            <p class="mx-2" id="categorises">Cultures</p>
                         </div>
                     </div>
-                </div>
-
+                
+    
+                    <div class="row">
+                        <div class="col">
+                            <div class="m-2 d-flex flex-wrap justify-content-around" id="pastSearches">
+                                <!-- past searched countries modal-->
+                                <div class="modal fade" id="limitModal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Country Search Limit</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>You've reached your max saved country limit of 8.<br>
+                                                    Please clear search history.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default"
+                                                    data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of searched modal -->
+    
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>      
             </div>
+            <div class="col-lg-3">
+                <nav id="navbar" class="navbar d-flex">
+                    <ul>
+                        <button class="btn"><li><a href="https://www.expedia.com/" target="_blank" id="bookNow">Book Now!</a></li></button>
+        
+                        <button class="btn"><li><a href="#" id="clearSearch">Clear Search History</a></li></button>
+
+                        <button class="btn"><li><a href="#pastSearches" id="pastSearch">Past Searches</a></li></button>
+
+                    </ul>
+                </nav>
+            </div>
+
         </div>
 
-            
-        <!-- .navbar -->
-        <nav id="navbar" class="navbar d-flex">
-            <ul>
-                <button class="btn"><li><a href="https://www.expedia.com/" target="_blank" id="bookNow">Book Now!</a></li></button>
-
-                <button class="btn"><li><a href="#" id="clearSearch">Clear Search History</a></li></button>
-            </ul>
-        </nav>
-
     </main>
-
 
 
         <!--Country Modal-->
