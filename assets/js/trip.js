@@ -51,7 +51,17 @@ $( document ).ready(function() {
       We calculate that a ${daysInput} day trip to ${countryInput} would cost you on average ${currency}${totalTripCost}.
       `;
       
-      $('#tripBudget').text(tripBudget);
+     let notripBudget =`
+      We don't have enough data about ${countryInput} to give you a trip budget, but please use our currency converter!
+      `;
+      
+
+      if (totalTripCost === 0){
+        $('#tripBudget').text(notripBudget);
+      }
+      else{
+        $('#tripBudget').text(tripBudget);
+      }
       
       const currencyCode = $('#budgetyourtrip .budgetyourtrip-costform:nth-child(3)').find('select').val();
   
@@ -72,7 +82,7 @@ $( document ).ready(function() {
           
           for (let x of response.query.search) {
           
-          const voyageBtn = $(`<a target="_blank" href="https://en.wikivoyage.org/wiki/${x.title}"><button class="btn m-1 btn-info">${x.title}</button></a>`);
+          const voyageBtn = $(`<a target="_blank" href="https://en.wikivoyage.org/wiki/${x.title}"><button class="btn m-1">${x.title}</button></a>`);
           $('#wiki').append(voyageBtn);
           
           

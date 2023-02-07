@@ -8,19 +8,17 @@ let inputs = document.querySelectorAll(".input input");
 let inpt1 = inputs[0];
 let inpt2 = inputs[1];
 
-const defaultCurrencyCode = 'GBP';
 // gets budget param from URL
 const Url = new URL(window.location.toLocaleString());
 const budget = Url.searchParams.get('budget');
 
-$(budgetInput).val(budget);
+$('#budgetInput').val(budget);
 
 // Empty Object to populate with rates
 let rates = {};
 
 
-
-let requestURL = "https://api.exchangerate.host/latest?base=USD";
+let requestURL = "https://api.exchangerate.host/latest?base=GBP";
 // Calling an API function
 fetchRates();
 
@@ -37,7 +35,7 @@ function populateOptions() {
   Object.keys(rates).forEach((code) => {
     let str;
     //Template for Inner HTML
-    if (defaultCurrencyCode == code)
+    if (code == "GBP")
       str = `<option value="${code}" selected>${code}</option>`;
     else
       str = `<option value="${code}">${code}</option>`;
@@ -82,6 +80,7 @@ resultBtn.addEventListener("click", () => {
     inpt2.value = calcVal;
   }
 });
+
 // Display rates on select of "options" element.
 selects.forEach((s) => s.addEventListener("change", displayRate));
 // Button to swap currency in converter

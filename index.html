@@ -7,139 +7,189 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet">
     </link>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
     <!-- Link to css -->
     <link rel="stylesheet" href="./assets/css/project.css" />
-
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Laila:wght@600&family=Red+Hat+Display:wght@500;700;900&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&family=Rubik:ital,wght@0,300;0,400;0,600;0,800;1,400;1,700&family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
     <!-- Link to bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <title>Broke But Cultured</title>
+    <title>Broke but Cultured</title>
 </head>
 
 <body>
-    <header id="header">
-        <div class="container-fluid" id="topBanner">
-            <h1 id="pageName">Broke but Cultured</h1>
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a href="#pastSearches" id="history">Past Searches</a></li>
-                    <li><a href="https://www.expedia.com/" target="_blank" id="bookNow">Book Now!</a></li>
-                    <li id="clearSearch"><a href="#">Clear Search History</a></li>
-                </ul>
-            </nav><!-- .navbar -->
 
+    <header id="header">
+        <div class="container" id="topBanner">
+            <h1 id="pageName" class="pt-5">Broke <span id="but">but</span> Cultured</h1>
         </div>
-    </header><!-- End Header -->
+    </header>
     <!-- End Header -->
     
-    <main id="hero">
-        <div class="container">
-            <div class="row">
-            <div class="col-lg-9">
+    <main class="container" id="hero">
+        <div class="row">
 
-                <h2>Need help finding your next destination?</h2>
-                <h3>Want to budget and stay cultured?</h3>
-                <h4>Search away...</h4>
-                   
-                        
-                <form action="trip.html" method="get" id="countries_search" target="_self">
-                    <label for="country"></label>
-                    <input type="hidden" name="countryCode" id="cca2" />
-                    <input type="text" id='search' placeholder="What country would you like to visit?" class="form-control" name="country" aria-label="Country Name" aria-describedby="basic-addon2">
-                    <label for="days"></label>
-                    <input type="number" id='daysInput' placeholder="For how many days?" class="form-control" name="days" aria-label="Days" aria-describedby="basic-addon2">
-                    <label for="budget"></label>
-                    <input type="number" id='budgetInput' placeholder="What's your budget (£) ?" class="form-control" name="budget" aria-label="budgetInput" aria-describedby="basic-addon2">
-                    <input type="submit" value="submit form" id="searchBtn">
-                </form>
-
-            </div>
-
-                    <!--Country Modal-->
-                    <div class="modal fade" id="countryModal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Incorrect Country Input</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Please enter a valid country from the options provided</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default"
-                                        data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of country modal -->
-
-                    <!--Days Modal-->
-                    <div class="modal fade" id="daysModal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Incorrect Days Input</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Please enter a valid number of days </p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default"
-                                        data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of days modal -->
-
-                    <!--Budget Modal-->
-                    <div class="modal fade" id="budgetModal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Incorrect Budget Input</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Please enter a numerical amount of money you have for your trip</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default"
-                                        data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of Budget modal -->
-                
-   
             <div class="col-lg-3">
-                    <img src="./assets/images/Lovepik_com-611131639-Travel Travel Passport Ticket png.png"
-                        class="img-fluid mb-3 mb-lg-0" id="passport" alt="">
+                <nav id="navbar" class="navbar d-flex">
+                    <ul>
+                        <button class="btn"><li><a href="#pastSearches" id="pastSearch">Past Searches</a></li></button>
+        
+                        <button class="btn"><li><a href="#" id="clearSearch">Clear Search History</a></li></button>
+
+                        <button class="btn"><li><a href="https://www.expedia.com/" target="_blank" id="bookNow">Book Now!</a></li></button>
+                    </ul>
+                </nav>
             </div>
 
-            <div class="row" id="stats">
-                <div class="col-lg-3" id="countryStats">
-                    <span>195</span>
-                    <p>Countries</p>
-                </div>
-                <div class="col-lg-3" id="currencyStats">
-                    <span>180</span>
-                    <p>Currencies</p>
-                </div>
-                <div class="col-lg-3" id="cultureStats">
-                    <span>1000+</span>
-                    <p>Cultures</p>
-                </div>
+            <div class ="col-lg-9">
+                <div class="card wrapper">
+
+                    <div class="titleGroup  pb-0">
+                        <h2>Need help finding your next destination?</h2>
+                        <h3>Want to budget and stay cultured?</h3>
+                        <h4><i>Search away...</i></h4>
+                    </div>
+    
+                    <form action="trip.html" method="get" id="countries_search" target="_self">
+                        <!-- <label for="country"></label> -->
+                        <input type="hidden" name="countryCode" id="cca2" />
+                        <div>
+                            <input type="text" id='search' placeholder="What country would you like to visit?"
+                                class="form-control" name="country" aria-label="Country Name"
+                                aria-describedby="basic-addon2">
+                        </div>
+                        <!-- <label for="days"></label> -->
+                        <div>
+                            <input type="number" id='daysInput' placeholder="For how many days?" class="form-control"
+                                name="days" aria-label="Days" aria-describedby="basic-addon2">
+                        </div>
+                        <!-- <label for="budget"></label> -->
+                        <div>
+                            <input type="number" id='budgetInput' placeholder="What's your budget (£) ?"
+                                class="form-control" name="budget" aria-label="budgetInput" aria-describedby="basic-addon2">
+                        </div>
+                        <input type="submit" value="Search" id="searchBtn" class="btn btn-secondary">
+                    </form>
+    
+                    <div class="d-flex justify-content-around" id="stats">
+                        <div id="countryStats">
+                            <p id="num">195</p>
+                            <hr>
+                            <p class="mx-2" id="categorises">Countries</p>
+                        </div>
+                        <div id="currencyStats">
+                            <p id="num">180</p>
+                            <hr>
+                            <p class="mx-2" id="categorises">Currencies</p>
+                        </div>
+                        <div id="cultureStats">
+                            <p id="num">1000+</p>
+                            <hr>
+                            <p class="mx-2" id="categorises">Cultures</p>
+                        </div>
+                    </div>
+                
+    
+                    <div class="row">
+                        <div class="col">
+                            <div class="m-2 d-flex flex-wrap justify-content-around" id="pastSearches">
+                                <!-- past searched countries modal-->
+                                <div class="modal fade" id="limitModal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Country Search Limit</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>You've reached your max saved country limit of 8.<br>
+                                                    Please clear search history.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default"
+                                                    data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End of searched modal -->
+    
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>      
             </div>
-            <div class="row">
-                <div class="col-lg-9" id="pastSearches">
-                    <!-- past searched countrues -->
-                </div>
-            </div>
+            
+        </div>
 
     </main>
+
+
+        <!--Country Modal-->
+        <div class="modal fade" id="countryModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Incorrect Country Input</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please enter a valid country from the options provided</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default"
+                            data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of country modal -->
+
+        <!--Days Modal-->
+        <div class="modal fade" id="daysModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Incorrect Days Input</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please enter a valid number of days </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default"
+                            data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of days modal -->
+
+        <!--Budget Modal-->
+        <div class="modal fade" id="budgetModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Incorrect Budget Input</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please enter a numerical amount of money you have for your trip</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default"
+                            data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Budget modal -->
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
