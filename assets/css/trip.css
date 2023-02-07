@@ -22,6 +22,10 @@ body{
     margin-bottom: 5rem;
 }
 
+.container {
+    margin-left: 0 !important;
+}
+
 h2, h3, h4, p {
     color: var(--text-blue);
 }
@@ -34,7 +38,6 @@ h1 {
 #but {
     color: var(--text-blue);
     font-size: 4.5rem !important;
-
 }
 
 #wiki > a > button {
