@@ -3,7 +3,7 @@ var daysInput =$('#daysInput').val()
 var budgetInput =$('#budgetInput').val()
 
 // ------------------AUTOCOMPLETE INPUT BAR-----------------------------
-
+//Empty array to push into
 var countries = []
 var historyCountries = []
 // set empty variable outside of function for country currency to be put into so that it can be sued for currency converter API
@@ -11,13 +11,14 @@ var countryCurrency=""
 var countryName =''
 
 
-// Autocomplete drop down menu for the user input 
+// Autocomplete drop down menu for the user input, found from JS Query website 
 function autocomplete(){
 $( "#search" ).autocomplete({
     source: countries
 })
 };
 
+// Empty object to push countrycodes into
 const countryCodes = {};
 
 // Function to provide country options for autocomplete input
@@ -46,7 +47,7 @@ function getCountries(){
 // Need to have getCountries function outside onclick, otherwise autocomplete does not display
 getCountries()
 $('#searchBtn').on('click', function(e){
-
+// If there is not input inside country name show modal to prompt user to input country
     const countryName = $('#search').val()
     if (countryName == '') {
         e.preventDefault();
@@ -60,12 +61,12 @@ $('#searchBtn').on('click', function(e){
     if (daysInput === '' ){
         e.preventDefault();
         $('#daysModal').modal('show');
-
         return
     }
     else{
         console.log(daysInput)
     }
+ // If there is not input inside country name show modal to prompt user to input country   
     var budgetInput =$('#budgetInput').val()
     if (budgetInput==="" ){
         e.preventDefault()
@@ -126,6 +127,7 @@ $('#clearSearch').on('click', function () {
 // Function to get the countries currency
 function currencyAPI(callback) {
     var countryName = $('#search').val()
+    // gets country code from the APO so it can use on trip.html
     let countryCode = countryCodes[countryName]
     var countryURL = 'https://restcountries.com/v2/alpha/'+countryCode
     $.ajax({
@@ -151,7 +153,7 @@ function renderButtons (){
     for (let i = 0; i < historyCountries.length; i++) {
         let search = historyCountries[i];
         //console.log(search)
-
+        // Creates new buttons with each search
         var buttons = $('<button>')
         buttons.attr({ 'class': "col-sm-3 btn btn-secondary savedCountryBtn" })
         // Buttons text is from the looping through of searchCity by the users input 
@@ -174,9 +176,8 @@ function clearButtons() {
 }
 // // ------FUNCTION SAVE COUNTRY-----
 function saveSearch() {
-    
+    // Stringify so can be parsed
     localStorage.setItem("historyCountries", JSON.stringify(historyCountries)); //saves country input to local storage 
-
 }
 
 // // ----FUNCTION GET SAVED COUNTY-----
