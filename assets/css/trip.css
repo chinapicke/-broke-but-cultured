@@ -84,6 +84,7 @@ select {
 #new {
     width: fit-content;
     margin: auto;
+    position: absolute;
 }
 
 /* svg css */
