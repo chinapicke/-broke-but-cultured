@@ -87,7 +87,7 @@ select {
 
 #new {
     width: fit-content;
-    margin: auto;
+    margin-left: 75vh;
     position: absolute;
 }
 
