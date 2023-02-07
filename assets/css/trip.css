@@ -127,4 +127,8 @@ select {
     h1 {
         color: var(--pink);
     }
+    #new{
+        margin-left: 100px;
+    }
+
 }
