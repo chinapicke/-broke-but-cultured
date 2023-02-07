@@ -2,13 +2,14 @@
     
     --maize: #F6D5A0;
     --pink: #FA9B95;
+    --bg-pink: #f0e5e4;
     --surf: #BBD6BF;
     --smalt-blue: #4E818B;
+    --smalt-bg-blue: #c6d5c8;
     --text-blue: #1f2348;
 }
 
 * {
-    /* font-family: 'Rubik', sans-serif; */
     font-family: 'Laila', sans-serif;
 }
 
@@ -17,7 +18,7 @@ html {
 }
 
 body{
-    background-color: whitesmoke !important;
+    background-color: var(--bg-pink)!important;
     margin-bottom: 5rem;
 }
 
@@ -116,7 +117,7 @@ select {
     }
 
     body{
-        background-color: var(--surf) !important;
+        background-color: var(--smalt-bg-blue) !important;
     }
 
 
