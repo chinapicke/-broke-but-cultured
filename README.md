@@ -5,9 +5,9 @@
 
 - [About the project](#about)
   - [User Story](#user-story)
-  - [App Screenshot](#app-screenshot)
   - [Built with](#built-with)
   - [API reference](#api-reference)
+  - [App Screenshot](#app-screenshot)
   - [Links](#links)
 - [Authors](#authors)
 - [License](#license)
