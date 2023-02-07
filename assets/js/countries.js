@@ -81,24 +81,29 @@ $('#searchBtn').on('click', function(e){
         $('#limitModal').modal('show')
         return
     }
-  
+
 
     e.preventDefault();
 
     currencyAPI(() => {
-        // saves all inputs to localStorage
-    
+
+        // Saves all inputs to localStorage
         $('#cca2').val(countryCodes[countryName]);
         let cca2 = countryCodes[countryName]
-    
-        historyCountries.push({
-            countryName: countryName,
-            countryCode: cca2,
-            budget: budgetInput,
-            days: daysInput
-        });
+        
+        // Prevent same country saving twice
+        if (!historyCountries.find(el => el.countryName == countryName)) {
 
-        localStorage.setItem("historyCountries", JSON.stringify(historyCountries)); //saves city input to local storage 
+            // Push search input object into array
+            historyCountries.push({
+                countryName: countryName,
+                countryCode: cca2,
+                budget: budgetInput,
+                days: daysInput
+            });
+
+            localStorage.setItem("historyCountries", JSON.stringify(historyCountries)); //saves input to local storage 
+        }
 
         $('form').submit();
     });
@@ -145,8 +150,8 @@ function renderButtons (){
     showSavedCountry()
     for (let i = 0; i < historyCountries.length; i++) {
         let search = historyCountries[i];
+        //console.log(search)
 
-        console.log(search)
         var buttons = $('<button>')
         buttons.attr({ 'class': "col-sm-3 btn btn-secondary savedCountryBtn" })
         // Buttons text is from the looping through of searchCity by the users input 
@@ -170,7 +175,7 @@ function clearButtons() {
 // // ------FUNCTION SAVE COUNTRY-----
 function saveSearch() {
     
-    localStorage.setItem("historyCountries", JSON.stringify(historyCountries)); //saves city input to local storage 
+    localStorage.setItem("historyCountries", JSON.stringify(historyCountries)); //saves country input to local storage 
 
 }
 
