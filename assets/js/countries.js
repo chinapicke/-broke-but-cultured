@@ -47,7 +47,7 @@ function getCountries(){
 // Need to have getCountries function outside onclick, otherwise autocomplete does not display
 getCountries()
 $('#searchBtn').on('click', function(e){
-// If there is not input inside country name or not an actual country name show modal to prompt user to input country
+// If there is not input inside country name show modal to prompt user to input country
     const countryName = $('#search').val()
     if (countryName == ''){ 
         e.preventDefault();
