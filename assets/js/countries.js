@@ -49,7 +49,7 @@ getCountries()
 $('#searchBtn').on('click', function(e){
 // If there is not input inside country name or not an actual country name show modal to prompt user to input country
     const countryName = $('#search').val()
-    if (countryName == ''|| !countryName.includes(countries)){ 
+    if (countryName == ''){ 
         e.preventDefault();
         $('#countryModal').modal('show')
         return
